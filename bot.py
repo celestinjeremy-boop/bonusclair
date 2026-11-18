@@ -90,7 +90,7 @@ def main():
     app.add_handler(CommandHandler("parrainage", parrainage))
     app.add_handler(CommandHandler("help", aide))
     app.add_handler(CommandHandler("aide", aide))
-    
+    app.add_handler(CallbackQueryHandler(button_handler))
 
     print("BonusClair est lancé !")
     app.run_polling()
